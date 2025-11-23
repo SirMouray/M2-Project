@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 //
 // Dichiaro l'enum ALEMENT
@@ -16,17 +17,4 @@ public enum ELEMENT
     ICE = 2,
     LIGHTNING = 3,
 
-}
-public class ELEMENTS : MonoBehaviour
-
-{
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
 }

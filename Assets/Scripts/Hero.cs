@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 // Crei la classe Hero Serializabile per poterla vedere in inspector
-[System.Serializable]
+[Serializable]
 public class Hero
 {
     [SerializeField] private string _PgName;
@@ -22,17 +23,23 @@ public class Hero
         this._weakness = weakness;
         this._weapon = weapon;
     }
-    public string Name { get; private set; }
+    public string Name
+    { get => _PgName; private set => _PgName = value; }
 
-    public int Hp { get => _hp; set => _hp = value; }
+    public int Hp
+    { get => _hp; set => _hp = value; }
 
-    public Stats BaseStats { get => _baseStats; set => _baseStats = value; }
+    public Stats BaseStats
+    { get => _baseStats; set => _baseStats = value; }
 
-    public ELEMENT Resistance { get => _resistance; set => _resistance = value; }
+    public ELEMENT Resistance
+    { get => _resistance; set => _resistance = value; }
 
-    public ELEMENT Weakness { get => _weakness; set => _weakness = value; }
+    public ELEMENT Weakness
+    { get => _weakness; set => _weakness = value; }
 
-    public Weapon Weapon { get => _weapon; set => _weapon = value; }
+    public Weapon Weapon
+    { get => _weapon; set => _weapon = value; }
 
     // Dichiaro il valori di Hp con SetHp()
     public void AddHp(int amount)
@@ -48,7 +55,7 @@ public class Hero
 
 }
 
-public class MyHero : MonoBehaviour
+public class MyHero
 {
     // Start is called before the first frame update
     void Start()

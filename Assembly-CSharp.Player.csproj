@@ -66,7 +66,7 @@
     <Compile Include="Assets\Scripts\Hero.cs" />
     <Compile Include="Assets\Scripts\Stats.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\GameFormula.cs" />
+    <Compile Include="Assets\Scripts\GameFormulas.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

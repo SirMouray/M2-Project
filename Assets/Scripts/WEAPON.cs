@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using System;
 
-[System.Serializable]
+[Serializable]
 
 //
 // Creo la classe Weapon
@@ -37,31 +38,18 @@ public class Weapon
         this.elementalDmg = elementalDmg;
         this.statsBonus = statsBonus;
     }
-    public string WeaponName
-    {
-        get => weaponName;
-        set => weaponName = value;
-    }
+    public string WeaponName 
+    {get => weaponName;set => weaponName = value;}
 
-    public DAMAGE_TYPE dmgType
-    {
-        get => damageType;
-        set => damageType = value;
-    }
+    public DAMAGE_TYPE dmgType 
+    {get => damageType;set => damageType = value;}
 
-    public ELEMENT ElementalDmg
-    {
-        get => elementalDmg;
-        set => elementalDmg = value;
-    }
+    public ELEMENT ElementalDmg 
+    {get => elementalDmg;set => elementalDmg = value;}
 
     public Stats StatsBonus
-    {
-        get => statsBonus;
-        set => statsBonus = value;
-    }
-}
-public class WEAPON : MonoBehaviour
+    {get => statsBonus;set => statsBonus = value;}}
+public class WEAPON
 {
     // Start is called before the first frame update
     void Start()
