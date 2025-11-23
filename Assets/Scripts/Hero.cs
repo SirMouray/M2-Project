@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+[System.Serializable]
 // Crei la classe Hero Serializabile per poterla vedere in inspector
-[Serializable]
 public class Hero
 {
     [SerializeField] private string _PgName;
@@ -37,6 +36,7 @@ public class Hero
 
     public ELEMENT Weakness
     { get => _weakness; set => _weakness = value; }
+
 
     public Weapon Weapon
     { get => _weapon; set => _weapon = value; }

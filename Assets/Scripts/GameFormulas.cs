@@ -40,14 +40,18 @@ public static class GameFormulas
     // Calcolo la % di colpire rapportando aim a eva
     public static bool HasHit(Stats attacker, Stats defender)
     {
-        int hitChance = Mathf.Clamp(attacker.aim - defender.eva, 0, 100);
+        int hitChance = Mathf.Clamp(attacker.aim - defender.eva, 5, 95);
         int roll = Random.Range(0, 100);
-        if (roll > hitChance)
+        if (roll >= hitChance)
         {
             Debug.Log("MISS");
             return false;
         }
-        else return true;
+        else
+        {
+            Debug.Log("HIT");
+        }
+return true;
     }
     public static bool IsCrit(int critValue)
     {

@@ -2,14 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-[System.Serializable]
-public class Statistiche
-{
-    public Statistiche()
-    {
-    }
+[Serializable]
 
-}
 //
 // Dichiaro la struct per le statistiche
 //
@@ -19,13 +13,13 @@ public struct Stats
     // Dichiaro le variabiabili pubbliche delle statistiche
     //
 
-    public int atk;
-    public int def;
-    public int res;
-    public int spd;
-    public int crt;
-    public int aim;
-    public int eva;
+    [SerializeField] public int atk;
+    [SerializeField] public int def;
+    [SerializeField] public int res;
+    [SerializeField] public int spd;
+    [SerializeField] public int crt;
+    [SerializeField] public int aim;
+    [SerializeField] public int eva;
 
     //
     // Creo un costruttore che assegna i valori alle variabili
